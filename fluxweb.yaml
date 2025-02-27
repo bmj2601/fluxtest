@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: fluxweb
+  name: fluxweb
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fluxweb
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: fluxweb
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+status: {}
